@@ -8,11 +8,10 @@ dotenv.config();
 const randomBytes = promisify(crypto.randomBytes);
 
 
-const region = process.env.AWS_BUCKET_REGION ?? "ap-south-1";
-const accessKeyId = process.env.AWS_ACCESS_KEY_ID ?? "AKIAQBBC3WOGNS34OAPN";
-const secretKeyId = process.env.AWS_SECRET_ACCESS_KEY_ID ?? "lryqYImr1dtJH3DrbwcI1CzrbH6N8oZ30saLENXy";
+const region = process.env.AWS_BUCKET_REGION;
+const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
+const secretKeyId = process.env.AWS_SECRET_ACCESS_KEY_ID;
 const bucketName = "tilli-demo";
-process.env.AWS_BUCKET_NAME ?? "tilli-demo";
 
 
 AWS.config.update({
